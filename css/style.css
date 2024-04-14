@@ -13,7 +13,7 @@ section, article {
     padding: 20px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-    max-width: 960px;
+    max-width: calc(60 * 16px);
 }
 
 p {
@@ -21,7 +21,7 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 60ch;
+    max-width: calc(60 * 16px);
 }
 
 h1 {
