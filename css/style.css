@@ -1,12 +1,57 @@
 /* style.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Quicksand','Dosis', Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+    color: #333333
+}
+
+section, article {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    max-width: 960px;
+}
+
+p {
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 60ch;
 }
 
 h1 {
-    color: #333;
+    color: #004080;
+    font-size: 28px;
+}
+
+h2 {
+    color: #00695C;
+    font-size: 24px;
+}
+
+h3 {
+    color: #808000;
+    font-size: 20px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+a:after {
+    color: #004080;
+    text-decoration: underline;
 }
 
 .container {
