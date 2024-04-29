@@ -34,7 +34,7 @@
 
 .logo:hover{
     color: #49c9d7;
-    text-shadow: 0 0 25px #49c9d7;
+    text-shadow: 0 0 25px #49c9d7,
                  0 0 50px #004080;
     transform: scale(1.1);
 }
@@ -43,21 +43,20 @@
     font-size: 18px;
     color: #FFFFFF;
     margin: 0 20px;
-    border-bottom: 2px solid transparent;
     transition: 0.3s ease;
 }
 
 .navbar a:hover,
 .navbar a.active{
     color: #49c9d7;
-    border-bottom: 2px solid #49c9d7;
+    text-decoration: underline;
 }
 
 .about-header,
 .gottphotos-header,
 .gottcustoms-header,
-.resume-header,
-.contact-header{
+.contact-header,
+.thank-you-header{
     position: fixed;
     top: 0;
     left: 0;
@@ -83,13 +82,10 @@
     transition: 0.3s ease;
 }
 
-.contact a:hover{
-    box-shadow: 0 0 25px #49c9d7;
-}
-
 .contact:hover,
 .contact:active,
-.contact:after{
+.contact:after,
+.contact-header .active:hover {
     background-color: #49c9d7;
     box-shadow: 0 0 25px #49c9d7;
     color: #FFFFFF;
@@ -127,10 +123,10 @@
     text-align: center;
     color: #FFFFFF;
     text-shadow: 
-        -1px -1px 0 #49c9d7,  
-        1px -1px 0 #49c9d7,
-        -1px 1px 0 #49c9d7,
-        1px 1px 0 #49c9d7;
+        -2px -2px 0 #49c9d7,  
+        2px -2px 0 #49c9d7,
+        -2px 2px 0 #49c9d7,
+        2px 2px 0 #49c9d7;
 }
 
 .home-content h3{
@@ -210,13 +206,13 @@
 
 .about-content h2,
 .gottphotos-content h2,
-.gottcustoms-content h2{
+.gottcustoms-content h2,
+.thank-you-content h2{
     font-size: 32px;
     margin-bottom: 10px;
     color: #49c9d7;
 }
 
-.about-content h3,
 .gottphotos-content h3,
 .gottcustoms-content h3{
     font-size: 20px;
@@ -231,7 +227,8 @@
 }
 
 .gottphotos-content p,
-.gottcustoms-content p{
+.gottcustoms-content p,
+.thank-you-content p{
     font-size: 16px;
     margin: 10px;
     line-height: 1.6;
@@ -337,6 +334,24 @@
     border-radius: 8px;
 }
 
+.contact-form form textarea{
+    margin-bottom: 20px;
+}
+
+.contact-form form .btn{
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.thank-you-content{
+    margin-top: 100px;
+    text-align: center;
+}
+
 .btn{
     padding: 15px 28px;
     background-color: #49c9d7;
@@ -376,7 +391,8 @@
 
 .footer .navbar a:hover,
 .footer .navbar a:after{
-    border-color: #49c9d7;
+    color: #49c9d7;
+    text-decoration: underline;
 }
 
 .footer .social{
