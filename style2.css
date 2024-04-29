@@ -1,0 +1,406 @@
+/* style2.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url('images 2/ft-laud-beach.jpg');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'Dosis', 'Arial', 'Helvetica', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: #49c9d7;
+    text-shadow: 0 0 25px #49c9d7;
+                 0 0 50px #004080;
+    transform: scale(1.1);
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #49c9d7;
+    border-bottom: 2px solid #49c9d7;
+}
+
+.about-header,
+.gottphotos-header,
+.gottcustoms-header,
+.resume-header,
+.contact-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.contact,
+.contact-header a.active{
+    padding: 10px;
+    background-color: #49c9d7;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.contact a:hover{
+    box-shadow: 0 0 25px #49c9d7;
+}
+
+.contact:hover,
+.contact:active,
+.contact:after{
+    background-color: #49c9d7;
+    box-shadow: 0 0 25px #49c9d7;
+    color: #FFFFFF;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #49c9d7;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50px;
+}
+
+.home{
+    background-image: url('images 2/ft-laud-beach.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+.home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+.home-content{
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 
+        -1px -1px 0 #49c9d7,  
+        1px -1px 0 #49c9d7,
+        -1px 1px 0 #49c9d7,
+        1px 1px 0 #49c9d7;
+}
+
+.home-content h3{
+    font-size: 42px;
+}
+
+.home-content h1{
+    font-size: 62px;
+}
+
+.home-img{
+    display: flex;
+    justify-content: space-between;
+    max-width: fit-content;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.home-img img{
+    flex: 0 0 30%;
+    width: 300px;
+    height: 400px;
+    margin-inline: 40px;
+    margin-bottom: 0;
+}
+
+.home-img figure{
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+.home-img figcaption{
+    margin-top: 5px;
+    display: block;
+    font-size: 18px;
+    color: #49c9d7;
+}
+
+.home-img a,
+.gottphotos-content a,
+.gottcustoms-content a{
+    color: #49c9d7;
+}
+
+.home-img a:hover,
+.home-img a:after,
+.gottphotos-content a:hover,
+.gottcustoms-content a:after,
+.gottcustoms-content a:hover,
+.gottcustoms-content a:after{
+    color: #49c9d7;
+    text-decoration: underline;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.about-img{
+    flex: 0 0 40%;
+}
+
+.about-img img{
+    width: 100%;
+    display: block;
+}
+
+.about-content{
+    flex: 0 0 60%;
+    padding: 20px;
+}
+
+.about-content h2,
+.gottphotos-content h2,
+.gottcustoms-content h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #49c9d7;
+}
+
+.about-content h3,
+.gottphotos-content h3,
+.gottcustoms-content h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.about-content p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.gottphotos-content p,
+.gottcustoms-content p{
+    font-size: 16px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.gottphotos{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.gottphotos-content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.gottphotos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+    margin: 20px;
+}
+
+.gottphotos-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gottphotos-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.gottcustoms{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.gottcustoms-content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.gottcustoms-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gottcustoms-logo img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.gottcustoms-img{
+    position: relative;
+    max-width: 100%;
+}
+
+.gottcustoms-imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.gottcustoms-imgs img{
+    margin: 20px;
+    max-width: 400px;
+    max-height: 400px;
+    display: none;
+}
+
+.contact-form h2{
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.contact-form form{
+    max-width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.contact-form form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form form .input-box input,
+.contact-form form textarea{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.btn{
+    padding: 15px 28px;
+    background-color: #49c9d7;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #49c9d7;
+    box-shadow: 0 0 25px #49c9d7;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+}
+
+.footer{
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .navbar{
+    display: flex;
+}
+
+.footer .navbar a{
+    color: #FFFFFF;
+    margin: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.footer .navbar a:hover,
+.footer .navbar a:after{
+    border-color: #49c9d7;
+}
+
+.footer .social{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer .social a{
+    font-size: 24px;
+    color: #FFFFFF;
+    border: 2px #49c9d7;
+    border-radius: 48%;
+    width: 40px;
+    height: 40px;
+    margin: 14px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 10px #49c9d7, 0 0 10px #49c9d7;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1.1)translateY(-8px);
+    color: #49c9d7;
+    border: 2px solid #49c9d7;
+}
