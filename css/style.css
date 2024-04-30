@@ -2,133 +2,405 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url('../images/ft-laud-beach.jpg');
 
-body {
-    font-family: 'Quicksand', 'Arial', 'Helvetica', sans-serif;
-    background-color: #FFFFFF;
-    color: #333333;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    font-size: 16px;
+
+@media (min-width: 768px) {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'Dosis', 'Arial', 'Helvetica', sans-serif; 
+    text-decoration: none;
+    list-style: none;
 }
 
-nav ul {
+.header{
+    color: #FFFFFF;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
-    padding: 0px;
-    margin: 0;
-    text-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-nav ul li {
-    flex: 0;
-}
-
-section {
+.about-header,
+.gottphotos-header,
+.gottcustoms-header,
+.contact-header,
+.thank-you-header{
+    background-color: #333333;
+    color: #FFFFFF;
     padding: 20px;
-    border: 1px solid #ccc;
-    margin-bottom: 40px;
-    max-width: calc(60 * 16px);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-article {
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    max-width: calc(60 * 16px);
+.logo{
+    font-size: 25px;
+    color: #FFFFFF;
+    transition: 0.3s ease;
 }
 
-p {
-    line-height: 1.6;
-    max-width: calc(60 * 16px);
+.logo:hover{
+    color: #49c9d7;
+    text-shadow: 0 0 25px #49c9d7,
+                 0 0 50px #004080;
+    transform: scale(1.1);
 }
 
-h1 {
-    color: #004080;
-    font-size: 28px;
-    margin-top: 0px;
-    margin-bottom: 20px;
+.navbar{
+    display: flex;
 }
 
-h2 {
-    color: #00695C;
-    font-size: 24px;
-    margin-top: 0px;
-    margin-bottom: 15px;
+.navbar a{
+    margin: 0 20px;
+    color: #FFFFFF;
+    font-size: 18px;
+    transition: 0.3s ease;
 }
 
-h3 {
-    color: #808000;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
-
-a,
-a:link {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover,
-a:focus,
-a:active,
-a:visited {
-    color: #004080;
+.navbar a:hover,
+.navbar a.active{
+    color: #49c9d7;
     text-decoration: underline;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.menu-btn {
+    display: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    
+.contact,
+.contact-header a.active{
+    background-color: #49c9d7;
+    color: #FFFFFF;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
-figure {
+.contact:hover,
+.contact:active,
+.contact:after,
+.contact-header .active:hover{
+    background-color: #49c9d7;
+    color: #FFFFFF;
+    box-shadow: 0 0 25px #49c9d7;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #49c9d7;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #333333;
+    width: 50px;
+}
+
+.home{
+    background-image: url('../images/ft-laud-beach.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+.home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+
+.home-content{
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 
+        -2px -2px 0 #49c9d7,  
+        2px -2px 0 #49c9d7,
+        -2px 2px 0 #49c9d7,
+        2px 2px 0 #49c9d7;
+}
+
+.home-content h1{
+    font-size: 62px;
+}
+
+.home-content h3{
+    font-size: 42px;
+}
+
+.home-img{
+    display: flex;
+    justify-content: space-between;
+    max-width: fit-content;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.home-img img{
+    flex: 0 0 30%;
+    width: 300px;
+    height: 400px;
+    margin-inline: 40px;
+    margin-bottom: 0;
+}
+
+.home-img figure{
+    text-align: center;
+    position: relative;
     margin: 0;
 }
 
-figcaption {
-    font-family: 'Dosis', 'Arial', 'Helvetica', sans-serif;
-    text-align: left;
+.home-img figcaption{
+    margin-top: 5px;
+    display: block;
+    font-size: 18px;
+    color: #49c9d7;
 }
 
-table {
+.home-img a,
+.gottphotos-content a,
+.gottcustoms-content a{
+    color: #49c9d7;
+}
+
+.home-img a:hover,
+.home-img a:after,
+.gottphotos-content a:hover,
+.gottcustoms-content a:after,
+.gottcustoms-content a:hover,
+.gottcustoms-content a:after{
+    color: #49c9d7;
+    text-decoration: underline;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.about-img{
+    flex: 0 0 40%;
+}
+
+.about-img img{
+    display: block;
+    max-width: 100%;
+}
+
+.about-content{
+    flex: 0 0 60%;
+    padding: 20px;
+}
+
+.about-content h2,
+.gottphotos-content h2,
+.gottcustoms-content h2,
+.thank-you-content h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #49c9d7;
+}
+
+.gottphotos-content h3,
+.gottcustoms-content h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.about-content p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.gottphotos-content p,
+.gottcustoms-content p,
+.thank-you-content p{
+    font-size: 16px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.gottphotos,
+.gottcustoms{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.gottphotos-content,
+.gottcustoms-content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.gottcustoms-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gottcustoms-logo img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.gottphotos-imgs,
+.gottcustoms-imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.gottphotos-imgs img,
+.gottcustoms-imgs img{
+    margin: 20px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.contact-form h2{
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.contact-form form{
+    max-width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.contact-form form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form form .input-box input,
+.contact-form form textarea{
+    align-items: center;
     width: 100%;
-    border-collapse: collapse;
+    padding: 5px;
+    margin: 5px;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 8px;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
+.contact-form form textarea{
+    margin-bottom: 20px;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.contact-form form .btn{
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
 }
 
-th {
-    background-color: #808000;
-    color: white;
+.btn{
+    padding: 15px 28px;
+    background-color: #49c9d7;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s ease;
 }
 
-th:nth-child(2) {
-    text-align: right;
+.btn:hover{
+    background-color: #49c9d7;
+    box-shadow: 0 0 25px #49c9d7;
+    color: #FFFFFF;
+    border: 2px solid transparent;
 }
 
-tr:hover {
-    background-color: #ddd;
+.thank-you-content{
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
 }
 
-td:nth-child(2) {
-    width: auto;
-    text-align: right;
+.footer{
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .navbar{
+    display: flex;
+}
+
+.footer .navbar a{
+    color: #FFFFFF;
+    margin: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.footer .navbar a:hover,
+.footer .navbar a:after{
+    color: #49c9d7;
+    text-decoration: underline;
+}
+
+.footer .social{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer .social a{
+    font-size: 24px;
+    color: #FFFFFF;
+    border: 2px #49c9d7;
+    border-radius: 48%;
+    width: 40px;
+    height: 40px;
+    margin: 14px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 10px #49c9d7, 0 0 10px #49c9d7;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1.1)translateY(-8px);
+    color: #49c9d7;
+    border: 2px solid #49c9d7;
+}
 }

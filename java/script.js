@@ -12,5 +12,14 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 2000);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const navbar = document.querySelector('.navbar');
+
+    menuBtn.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
+});

@@ -3,47 +3,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
 @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
-@import url('images 2/ft-laud-beach.jpg');
+@import url('../images/ft-laud-beach.jpg');
 
+@media only screen and (max-device-width: 428px) {
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', 'Dosis', 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Quicksand', 'Dosis', 'Arial', 'Helvetica', sans-serif; 
     text-decoration: none;
-    list-style: none;
+    list-style: none
 }
 
 .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
+    color: #FFFFFF;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: 100;
+}
+
+.about-header,
+.gottphotos-header,
+.gottcustoms-header,
+.contact-header,
+.thank-you-header{
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
 }
 
 .logo{
-    font-size: 25px;
+    font-size: 20px;
     color: #FFFFFF;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .logo:hover{
     color: #49c9d7;
-    text-shadow: 0 0 25px #49c9d7,
-                 0 0 50px #004080;
+    text-shadow: none;
     transform: scale(1.1);
 }
 
+.navbar{
+    display: none;
+}
+
+.navbar.active{
+    display: block;
+}
+
 .navbar a{
-    font-size: 18px;
-    color: #FFFFFF;
-    margin: 0 20px;
-    transition: 0.3s ease;
+    display: block;
+    margin: 10px 0;
+    color: #49c9d7;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover,
@@ -52,75 +80,70 @@
     text-decoration: underline;
 }
 
-.about-header,
-.gottphotos-header,
-.gottcustoms-header,
-.contact-header,
-.thank-you-header{
+.menu-btn{
+    display: block;
+    background: none;
+    border: none;
+    color: #49c9d7;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.menu-btn:hover{
+    color: #49c9d7;
+}
+
+.navbar{
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
     background-color: #333333;
-    color: #FFFFFF;
+    z-index: 99;
+    }
+
+.menu-btn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
 }
 
 .contact,
 .contact-header a.active{
-    padding: 10px;
     background-color: #49c9d7;
     color: #FFFFFF;
+    padding: 5px;
+    margin: 5px;
     border: 2px solid transparent;
     border-radius: 8px;
     font-size: 16px;
     letter-spacing: 1px;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact:hover,
-.contact:active,
-.contact:after,
-.contact-header .active:hover {
+.contact:active{
     background-color: #49c9d7;
     box-shadow: 0 0 25px #49c9d7;
-    color: #FFFFFF;
 }
-
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: #49c9d7;
-}
-
-::-webkit-scrollbar-track{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 50px;
-}
-
+   
 .home{
-    background-image: url('images 2/ft-laud-beach.jpg');
+    background-image: url('../images/ft-laud-beach.jpg');
     background-size: cover; 
     background-position: center;
-}
-
-.home{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     height: 100vh;
 }
 
 .home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    height: 100%;
     color: #FFFFFF;
     text-shadow: 
         -2px -2px 0 #49c9d7,  
@@ -129,41 +152,41 @@
         2px 2px 0 #49c9d7;
 }
 
-.home-content h3{
-    font-size: 42px;
+.home-content h1{
+    font-size: 48px;
 }
 
-.home-content h1{
-    font-size: 62px;
+.home-content h3{
+    font-size: 24px;
 }
 
 .home-img{
     display: flex;
-    justify-content: space-between;
-    max-width: fit-content;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 .home-img img{
-    flex: 0 0 30%;
-    width: 300px;
-    height: 400px;
-    margin-inline: 40px;
-    margin-bottom: 0;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2px;
 }
 
 .home-img figure{
     text-align: center;
     position: relative;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .home-img figcaption{
-    margin-top: 5px;
+    margin-bottom: 5px;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #49c9d7;
+    text-align: center;
 }
 
 .home-img a,
@@ -173,105 +196,73 @@
 }
 
 .home-img a:hover,
-.home-img a:after,
 .gottphotos-content a:hover,
-.gottcustoms-content a:after,
 .gottcustoms-content a:hover,
-.gottcustoms-content a:after{
+.gottcustoms-content a:hover{
     color: #49c9d7;
     text-decoration: underline;
 }
 
 .about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 20px 10px;
 }
 
 .about-img{
-    flex: 0 0 40%;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
 }
 
 .about-img img{
     width: 100%;
-    display: block;
 }
 
 .about-content{
-    flex: 0 0 60%;
-    padding: 20px;
+    flex: 0 0 100%;
+    padding: 0;
+}
+
+.about,
+.gottphotos,
+.gottcustoms{
+    text-align: center;
 }
 
 .about-content h2,
 .gottphotos-content h2,
 .gottcustoms-content h2,
 .thank-you-content h2{
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
     color: #49c9d7;
 }
 
 .gottphotos-content h3,
 .gottcustoms-content h3{
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333333;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.about-content p{
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
+.about-content p,
 .gottphotos-content p,
 .gottcustoms-content p,
 .thank-you-content p{
-    font-size: 16px;
-    margin: 10px;
-    line-height: 1.6;
+    font-size: 14px;
+    margin: 5px 0;
 }
 
-.gottphotos{
-    margin-top: 100px;
-    text-align: center;
-}
-
-.gottphotos-content{
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.gottphotos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 10px;
-    margin: 20px;
-}
-
-.gottphotos-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.gottphotos-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
+.gottphotos,
 .gottcustoms{
-    margin-top: 100px;
-    text-align: center;
+    margin-top: 70px;
 }
 
+.gottphotos-content,
 .gottcustoms-content{
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 10px;
+    margin: 0;
 }
 
 .gottcustoms-logo{
@@ -281,84 +272,53 @@
 }
 
 .gottcustoms-logo img{
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 60px;
+    max-height: 60px;
 }
 
-.gottcustoms-img{
-    position: relative;
-    max-width: 100%;
-}
-
-.gottcustoms-imgs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-}
-
+.gottphotos-imgs img,
 .gottcustoms-imgs img{
-    margin: 20px;
-    max-width: 400px;
-    max-height: 400px;
-    display: none;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
 }
 
 .contact-form h2{
-    text-align: center;
-    justify-content: center;
-    margin: 20px;
-    margin-top: 100px;
-    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
 }
 
 .contact-form form{
-    max-width: 100%;
-    margin: 20px;
+    max-width: 90%;
+    margin: 20px auto;
     text-align: center;
-}
-
-.contact-form form .input-box{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .contact-form form .input-box input,
 .contact-form form textarea{
+    align-items: center;
     width: 100%;
-    padding: 5px;
-    margin: 5px;
-    font-size: 18px;
-    border: 1px solid;
-    border-radius: 8px;
 }
 
 .contact-form form textarea{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .contact-form form .btn{
     width: 100%;
-    padding: 5px;
-    margin-top: 20px;
-    font-size: 18px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-}
-
-.thank-you-content{
-    margin-top: 100px;
-    text-align: center;
+    margin: 0 auto;
 }
 
 .btn{
-    padding: 15px 28px;
+    padding: 5px;
     background-color: #49c9d7;
     color: #FFFFFF;
     border: 2px solid transparent;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 12px;
     transition: 0.3s ease;
 }
 
@@ -369,15 +329,23 @@
     border: 2px solid transparent;
 }
 
+.thank-you-content{
+    margin-top: 70px;
+    text-align: center;
+}
+
 .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #333333;
     color: #FFFFFF;
     padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
 .footer .navbar{
+    
     display: flex;
 }
 
@@ -419,4 +387,6 @@
     transform: scale(1.1)translateY(-8px);
     color: #49c9d7;
     border: 2px solid #49c9d7;
+}
+
 }
