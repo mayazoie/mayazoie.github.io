@@ -6,6 +6,7 @@
 @import url('../images/ft-laud-beach.jpg');
 
 @media only screen and (max-device-width: 428px) {
+    
 *{
     margin: 0;
     padding: 0;
@@ -69,6 +70,7 @@
 .navbar a{
     display: block;
     margin: 10px 0;
+    background: none;
     color: #49c9d7;
     font-size: 16px;
     transition: color 0.3s ease;
@@ -76,6 +78,7 @@
 
 .navbar a:hover,
 .navbar a.active{
+    background: none;
     color: #49c9d7;
     text-decoration: underline;
 }
@@ -92,6 +95,7 @@
 }
 
 .menu-btn:hover{
+    background: none;
     color: #49c9d7;
 }
 
@@ -100,15 +104,30 @@
     top: 50px;
     left: 0;
     width: 100%;
-    background-color: #333333;
+    background: #333333;
     z-index: 99;
-    }
+}
 
 .menu-btn{
     position: fixed;
     top: 10px;
     right: 10px;
     z-index: 100;
+}
+
+.menu-btn,
+.contact{
+    position: relative;
+    z-index: 101;
+}
+
+.menu-btn{
+    top: 0px;
+    right: 0px;
+}
+
+.contact{
+    top: 0px;
 }
 
 .contact,
@@ -166,6 +185,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+    margin-bottom: 70px;
 }
 
 .home-img img{
@@ -207,6 +227,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 50px;
+    margin-bottom: 70px;
     padding: 20px 10px;
 }
 
@@ -233,6 +254,7 @@
 .about-content h2,
 .gottphotos-content h2,
 .gottcustoms-content h2,
+.contact-form h2,
 .thank-you-content h2{
     font-size: 24px;
     margin-bottom: 5px;
@@ -276,12 +298,20 @@
     max-height: 60px;
 }
 
+.gottphotos-imgs,
+.gottcustoms-imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .gottphotos-imgs img,
 .gottcustoms-imgs img{
     margin: 10px;
-    max-width: 100%;
+    margin-bottom: 100px;
+    max-width: 90%;
     height: auto;
-    display: inline-block;
 }
 
 .contact-form h2{
@@ -342,51 +372,61 @@
     background-color: #333333;
     color: #FFFFFF;
     padding: 20px;
+    z-index: 1000;
 }
 
-.footer .navbar{
-    
+.footer-content{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer .navbar a{
+.footer .footer-navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer .footer-navbar a{
     color: #FFFFFF;
-    margin: 20px;
+    margin: 0 20px;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s ease;
 }
 
-.footer .navbar a:hover,
-.footer .navbar a:after{
+.footer .footer-navbar a:hover,
+.footer .footer-navbar a:after{
     color: #49c9d7;
     text-decoration: underline;
 }
 
-.footer .social{
-    text-align: center;
-    color: #FFFFFF;
+.social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.footer .social a{
-    font-size: 24px;
+.social a{
+    font-size: 14px;
     color: #FFFFFF;
     border: 2px #49c9d7;
     border-radius: 48%;
-    width: 40px;
-    height: 40px;
-    margin: 14px;
-    line-height: 40px;
+    width: 24px;
+    height: 24px;
+    margin: 0 14px;
+    line-height: 24px;
     display: inline-block;
     text-align: center;
     box-shadow: 0 0 10px #49c9d7, 0 0 10px #49c9d7;
     transition: 0.3s ease;
 }
 
-.footer .social a:hover{
-    transform: scale(1.1)translateY(-8px);
+.social a:hover{
+    transform: scale(1.1) translateY(-8px);
     color: #49c9d7;
     border: 2px solid #49c9d7;
 }
-
 }

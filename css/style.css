@@ -219,6 +219,7 @@
 .about-content h2,
 .gottphotos-content h2,
 .gottcustoms-content h2,
+.contact-form h2,
 .thank-you-content h2{
     font-size: 32px;
     margin-bottom: 10px;
@@ -284,7 +285,7 @@
     max-height: 400px;
 }
 
-.contact-form h2{
+.contact-form .contact-me{
     text-align: center;
     justify-content: center;
     margin: 20px;
@@ -360,11 +361,11 @@
     justify-content: center;
 }
 
-.footer .navbar{
+.footer .footer-navbar{
     display: flex;
 }
 
-.footer .navbar a{
+.footer .footer-navbar a{
     color: #FFFFFF;
     margin: 20px;
     text-decoration: none;
@@ -372,8 +373,8 @@
     transition: border-color 0.3s ease;
 }
 
-.footer .navbar a:hover,
-.footer .navbar a:after{
+.footer .footer-navbar a:hover,
+.footer .footer-navbar a:after{
     color: #49c9d7;
     text-decoration: underline;
 }
