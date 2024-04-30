@@ -204,6 +204,7 @@
 .home-img figcaption{
     margin-bottom: 5px;
     display: block;
+    font-family: 'Dosis', 'Quicksand', 'Arial', 'Helvetica', sans-serif; 
     font-size: 16px;
     color: #49c9d7;
     text-align: center;

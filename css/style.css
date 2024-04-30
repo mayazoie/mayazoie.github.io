@@ -174,6 +174,7 @@
 .home-img figcaption{
     margin-top: 5px;
     display: block;
+    font-family: 'Dosis', 'Quicksand', 'Arial', 'Helvetica', sans-serif; 
     font-size: 18px;
     color: #49c9d7;
 }
