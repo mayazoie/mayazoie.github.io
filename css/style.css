@@ -102,19 +102,6 @@
     box-shadow: 0 0 25px #49c9d7;
 }
 
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: #49c9d7;
-}
-
-::-webkit-scrollbar-track{
-    background-color: #333333;
-    width: 50px;
-}
-
 .home{
     background-image: url('../images/ft-laud-beach.jpg');
     background-size: cover; 
